@@ -1,0 +1,37 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.section-width {
+    width: 90%;
+    height:fit-content;
+}
+
+.line {
+    position: relative;
+}
+
+.line:after {
+    content: "";
+    background: black;
+    position: absolute;
+    left: 25%;
+    height: 1px;
+    width: 50%;
+    margin-top: 15px;
+  }
+
+.title-home {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.text-presentation {
+    text-align: center;
+
+}
+

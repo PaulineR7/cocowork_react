@@ -1,0 +1,9 @@
+@import '../abstracts/variables';
+
+@mixin btn {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: black;
+    color: $text_color1;
+
+}

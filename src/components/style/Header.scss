@@ -1,0 +1,32 @@
+@import '../../sass/abstracts/variables';
+@import '../../../src/sass/abstracts/mixins';
+
+header {
+    background-color: $background_color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 15%;
+    text-align: center;
+    color: $text_color1;
+    text-transform: uppercase;
+}
+
+.ul-header {
+    width: 50%;
+    display:flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+li {
+    color: $text_color1;
+}
+
+.btn {
+    @include btn
+}
+

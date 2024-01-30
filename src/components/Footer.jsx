@@ -1,3 +1,5 @@
+import './style/Footer.scss'
+
 function Footer () {
     return(
         <footer>
@@ -9,10 +11,8 @@ function Footer () {
             </div>
 
             <div>
-                <img src="" alt="" />
+                <img className='map' src='assets/img/plan-bordeaux-13438.jpg' alt="" />
             </div>
-
-            <div>Cocowork</div>
 
         </footer>
     )

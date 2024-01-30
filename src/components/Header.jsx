@@ -1,13 +1,15 @@
+import './style/Header.scss'
+
 function Header() {
     return(
         <header>
-            <div>Cocowork</div>
-            <ul>
+            <div className='logo'>Cocowork</div>
+            <ul className='ul-header'>
                 <li>Accueil</li>
-                <li>Espace coworking</li>
                 <li>Espace membre</li>
                 <li>Contact</li>
-                <li>Connexion</li>
+                <li>Espace coworking</li>
+                <li><button className='btn'>Connexion</button></li>
             </ul>
         </header>
     )

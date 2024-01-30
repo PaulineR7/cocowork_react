@@ -1,0 +1,14 @@
+@import '../../sass/abstracts/variables';
+
+
+footer {
+    background-color: $background_color;
+    color: $text_color1;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.map {
+    height: 200px;
+}
