@@ -16,6 +16,7 @@ function Header() {
                 <Link to='/'><li>Accueil</li></Link>
                 <li>Espace membre</li>
                 <Link to='/contact' ><li>Contact</li></Link>
+                <Link to='/admin'><li>Dashboard</li></Link>
                 <li onClick={handleClick} className='menu-with-submenu'>Espace coworking &#8595;
                 {submenuVisible && (
                     <ul className="sub-menu">

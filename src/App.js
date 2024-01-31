@@ -6,11 +6,14 @@ import ContactPage from './pages/guest/ContactPage';
 import CoworksPage from './pages/guest/CoworksPPage';
 import ClosedSpacePage from './pages/guest/ClosedSpacePage';
 import MettingRoomPage from './pages/guest/MettingRoomPage';
+import DashboardAdmin from './pages/admin/DashboardAdmin';
+import AdminUsersPage from './pages/admin/AdminUsersPage';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+                  {/* ROUTES USERS */}
         <Route path='/' element={<HomePage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/inscription' element={<InscriptionPage />} />
@@ -18,6 +21,10 @@ function App() {
         <Route path='/coworks' element={<CoworksPage />} />
         <Route path='/closedspace' element={<ClosedSpacePage />} />
         <Route path='/mettingroom' element={<MettingRoomPage />} />
+
+                  {/* ROUTES ADMIN */}
+        <Route path='/admin' element={<DashboardAdmin />} />
+        <Route path='/admin/users' element={<AdminUsersPage />} />
       </Routes>
     </BrowserRouter>
   );

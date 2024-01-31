@@ -1,0 +1,31 @@
+.title-admin {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.section-admin{
+    margin-bottom: 47px;
+}
+
+.ul-admin {
+    padding: 0;
+}
+
+.li-admin {
+    color: black;
+    list-style: none;
+    border: 2px solid #930101;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.li-admin:hover {
+    border: 2px solid black;
+    background-color: #930101;
+    color: white;
+}
+

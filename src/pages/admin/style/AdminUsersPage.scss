@@ -1,0 +1,28 @@
+.title-users {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.flex-users {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    border: 2px solid #930101;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.title-article-users {
+    text-align: center;
+}
+.img-valide-users {
+    height: 30px;
+    width: 30px;
+}
+
+.img-loupe {
+    height: 30px;
+    width: 30px;
+}
