@@ -8,6 +8,7 @@ import ClosedSpacePage from './pages/guest/ClosedSpacePage';
 import MettingRoomPage from './pages/guest/MettingRoomPage';
 import DashboardAdmin from './pages/admin/DashboardAdmin';
 import AdminUsersPage from './pages/admin/AdminUsersPage';
+import AdminMeetingRoom from './pages/admin/AdminMettingRoom';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
                   {/* ROUTES ADMIN */}
         <Route path='/admin' element={<DashboardAdmin />} />
         <Route path='/admin/users' element={<AdminUsersPage />} />
+        <Route path='/admin/meetingroom' element={<AdminMeetingRoom />} />
+
       </Routes>
     </BrowserRouter>
   );

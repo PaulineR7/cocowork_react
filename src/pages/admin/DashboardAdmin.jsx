@@ -11,7 +11,7 @@ function DashboardAdmin() {
             <h2 className="title-admin">Dashboard</h2>
             <ul className="ul-admin">
                 <Link to='/admin/users' ><li className="li-admin">Gestion des abonnés</li></Link>
-                <Link><li className="li-admin">Gestion salles de réunion</li></Link>
+                <Link to='/admin/meetingroom'><li className="li-admin">Gestion salles de réunion</li></Link>
                 <Link><li className="li-admin">Gestion des réservations</li></Link>
                 <Link><li className="li-admin">Gestion du site</li></Link>
             </ul>
