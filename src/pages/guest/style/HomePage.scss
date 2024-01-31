@@ -1,3 +1,5 @@
+@import '../../../sass/abstracts/variables';
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -6,13 +8,39 @@ main {
 
 }
 
+
+
 .section-width {
     width: 90%;
     height:fit-content;
+    margin-top: 50px;
+}
+
+.carousel .text-carousel {
+    color: white;
+    text-align: center;
+    position: absolute;
+    width: 60%;
+    left: 18%;
+    top: 50%;
+    transform: translateY(-50);
+    background: rgb(0, 0, 0, 0.6);
+}
+
+.carousel {
+    border-radius: 50px;
+}
+
+.thumbs {
+    display: none;
 }
 
 .line {
     position: relative;
+}
+
+.slider {
+    height: 600px;
 }
 
 .line:after {

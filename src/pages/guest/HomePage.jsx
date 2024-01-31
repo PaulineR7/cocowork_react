@@ -1,6 +1,8 @@
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import '../guest/style/HomePage.scss';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 
 function HomePage () {
@@ -12,17 +14,29 @@ function HomePage () {
         <main>
 
             <section className="section-width line">
-                <div className="owl-carousel owl-theme">
-                    <div className="item">
-                        <h4>1</h4>
+                <Carousel autoPlay interval={6000} infiniteLoop thumbs={false} showStatus={false}>
+                    <div>
+                        <img className="img-carousel" src="assets/img/coworks.webp" alt="" />
+                        <div className="text-carousel">
+                            <h2>30 bureaux nomades</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nulla, accusantium numquam, unde exercitationem expedita praesentium facere corporis, inventore dignissimos excepturi omnis vero ducimus. Iusto?</p>
+                        </div>
                     </div>
-                    <div className="item">
-                        <h4>2</h4>
+                    <div>
+                        <img className="img-carousel" src="assets/img/closedspace.webp" alt="" />
+                        <div className="text-carousel">
+                            <h2>Espaces fermés</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nulla, accusantium numquam, unde exercitationem expedita praesentium facere corporis, inventore dignissimos excepturi omnis vero ducimus. Iusto?</p>
+                        </div>
                     </div>
-                    <div className="item">
-                        <h4>3</h4>
+                    <div>
+                        <img className="img-carousel" src="assets/img/mettingroom.webp" alt="" />
+                        <div className="text-carousel">
+                            <h2>Salle de réunion</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nulla, accusantium numquam, unde exercitationem expedita praesentium facere corporis, inventore dignissimos excepturi omnis vero ducimus. Iusto?</p>
+                        </div>
                     </div>
-                </div>
+                </Carousel>
             </section>
 
             <section className="section-width line">
