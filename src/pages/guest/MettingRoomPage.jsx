@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import '../guest/style/MettingRoomPage.scss';
@@ -12,7 +13,7 @@ function MettingRoomPage() {
                 <h3>Salle privée 1</h3>
                 <p>Description</p>
                 <p>Prix</p>
-                <button className="btn">Réserver</button>
+                <Link to='/reservation'><button className="btn">Réserver</button></Link>
             </article>
         </section>
         <Footer />

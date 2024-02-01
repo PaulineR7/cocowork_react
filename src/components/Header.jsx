@@ -14,7 +14,7 @@ function Header() {
             <div className='logo'>Cocowork</div>
             <ul className='ul-header'>
                 <Link to='/'><li>Accueil</li></Link>
-                <li>Espace membre</li>
+                <Link to="/spacemember"><li>Espace membre</li></Link>
                 <Link to='/contact' ><li>Contact</li></Link>
                 <Link to='/admin'><li>Dashboard</li></Link>
                 <li onClick={handleClick} className='menu-with-submenu'>Espace coworking &#8595;
