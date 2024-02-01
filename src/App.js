@@ -24,7 +24,7 @@ function App() {
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/coworks' element={<CoworksPage />} />
         <Route path='/closedspace' element={<ClosedSpacePage />} />
-        <Route path='/mettingroom' element={<MettingRoomPage />} />
+        <Route path='/meetingrooms' element={<MettingRoomPage />} />
         <Route path='/reservation' element={<ReservationPage />} />
         <Route path='/spacemember' element={<SpaceMember />} />
 

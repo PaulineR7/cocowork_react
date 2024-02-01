@@ -28,7 +28,7 @@ return (
             <>
             {meetingRooms.map((meetingRoom) => (
                 <article className="article-mettingroom" key={meetingRoom.id}>
-                <img className='mettingroom-img' src={meetingRoom.imageUrl} alt="Image de la salle de réunion" />
+                <img className='mettingroom-img' src={meetingRoom.imageUrl} alt="Salle de réunion" />
                 <h3>{meetingRoom.name}</h3>
                 <p>{meetingRoom.description}</p>
                 <p>{meetingRoom.price}</p>
