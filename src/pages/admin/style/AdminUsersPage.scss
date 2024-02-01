@@ -5,13 +5,17 @@
 
 .flex-users {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 5%;
     border: 2px solid #930101;
     width: 80%;
     margin: auto;
     margin-bottom: 20px;
+}
+
+.width-name {
+    width: 15%;
 }
 
 .title-article-users {

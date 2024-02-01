@@ -1,10 +1,10 @@
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import './../admin/style/AdminUsersPage.scss';
-import { useEffect} from "react";
+import { useEffect, useState} from "react";
 
 function AdminUsersPage() {
-    const [users, setUsers] = useState();
+    const [users, setUsers] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -26,9 +26,10 @@ function AdminUsersPage() {
             users
             .filter((user) => user.status === false)
             .map((user) => (
+            
               <article className="flex-users" key={user.id}>
-                <p>{user.lastname}</p>
-                <p>{user.name}</p>
+                <p className="width-name">{user.lastname}</p>
+                <p className="width-name">{user.name}</p>
                 <img className="img-valide-users"src="../assets/img/valide.png" alt="validation"/>
                 <img className="img-valide-users"src="../assets/img/delete.png" alt="croix rouge"/>
               </article>
@@ -48,11 +49,11 @@ function AdminUsersPage() {
 
               return (
                 <article className="flex-users" key={user.id}>
-                  <p>{user.lastname}</p>
-                  <p>{user.name}</p>
-                  <p>Statut : Validé</p>
-                  <p>Date inscription : {formattedDate}</p>
-                  <p>Date de validation</p>
+                  <p className="width-name">{user.lastname}</p>
+                  <p className="width-name">{user.name}</p>
+                  <p className="width-name">Statut : Validé</p>
+                  <p className="width-name">Date inscription : {formattedDate}</p>
+                  <p className="width-name">Date de validation</p>
                   <img className="img-loupe" src="../assets/img/loupe.png" alt="" />
                   <img className="img-valide-users" src="../assets/img/delete.png" alt="croix rouge" />
                 </article>
