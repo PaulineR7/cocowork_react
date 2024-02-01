@@ -12,9 +12,9 @@ function ClosedSpacePage() {
             const closedSpacesResponseData = await closedSpacesResponse.json()
 
             setClosedSpaces(closedSpacesResponseData);
-            console.log(closedSpaces)
+            // console.log(closedSpaces)
     })()
-    },[])
+    },[closedSpaces])
 
     return (
         <>
@@ -25,7 +25,7 @@ function ClosedSpacePage() {
               <>
                 {closedSpaces.map((closedSpace) => (
                   <article className="article-closedspace" key={closedSpace.id}>
-                    <img className='closedspace-img' src={closedSpace.image} alt="Image de l'espace fermé" />
+                    <img className='closedspace-img' src={closedSpace.image} alt="l'espace fermé" />
                     <h3>{closedSpace.name}</h3>
                     <button className="btn">Réserver</button>
                   </article>

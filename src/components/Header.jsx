@@ -22,7 +22,7 @@ function Header() {
                     <ul className="sub-menu">
                             <Link to='/coworks'><li>30 bureaux nomades</li></Link>
                             <Link to='/closedspace'><li>Espaces privés</li></Link>
-                            <Link to='/mettingroom' ><li>Salles de réunion</li></Link>
+                            <Link to='/meetingrooms' ><li>Salles de réunion</li></Link>
                     </ul>
                 )}
                     
