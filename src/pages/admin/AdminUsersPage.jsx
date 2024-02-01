@@ -2,23 +2,10 @@ import { useState } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import './../admin/style/AdminUsersPage.scss';
-import { useEffect, useState } from "react";
-import { jwtDecode } from "jwt-decode";
-import { useNavigate } from "react-router-dom";
+import { useEffect} from "react";
 
 function AdminUsersPage() {
-  const navigate = useNavigate();
-  const [users, setUsers] = useState(null);
-  const token = localStorage.getItem("jwt");
-  const decodedToken = jwtDecode(token);
-
-  useEffect(() => {
-    const token = localStorage.getItem("jwt");
-
-    if (!token) {
-      navigate("/login");
-    }
-  }, [navigate]);
+    const [users, setUsers] = useState();
 
   useEffect(() => {
     (async () => {
