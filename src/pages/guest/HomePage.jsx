@@ -49,7 +49,20 @@ Chez nous, votre productivité et votre bien-être sont notre priorité. Rejoign
             </section>
 
             <section  className="section-width">
-                <p>Vidéo</p>
+            <iframe className="video"
+               title="Facebook Video"
+               width="560"
+               height="314"
+               src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmotacoworking%2Fvideos%2F560120267710511%2F&show_text=false&width=560&t=0"
+               style={{
+                 border: 'none',
+                 overflow: 'hidden',
+                 margin: '0 auto', 
+                 display: 'block', 
+               }}
+               allowFullScreen={true}
+               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
             </section>
             
 
