@@ -19,32 +19,30 @@ function MettingRoomPage() {
     
 
 
-    return(
-        <>
+return (
+    <>
         <Header />
-        <h2>Salle de réunion</h2>
+        <h2>Salles de réunion</h2>
+        <section className="section-mettingroom">
         {meetingRooms ? (
-        <>
-            {meetingRooms.map((meetingRoom) => {
-            return (
-                <section className="section-mettingroom" key={meetingRoom.id}>
-                <article className="article-mettingroom">
-                    <img className='mettingroom-img' src={meetingRoom.imageUrl} alt="Image de la salle de réunion" />
-                    <h3>{meetingRoom.name}</h3>
-                    <p>{meetingRoom.description}</p>
-                    <p>{meetingRoom.price}</p>
-                    <Link to='/reservation'><button className="btn">Réserver</button></Link>
+            <>
+            {meetingRooms.map((meetingRoom) => (
+                <article className="article-mettingroom" key={meetingRoom.id}>
+                <img className='mettingroom-img' src={meetingRoom.imageUrl} alt="Image de la salle de réunion" />
+                <h3>{meetingRoom.name}</h3>
+                <p>{meetingRoom.description}</p>
+                <p>{meetingRoom.price}</p>
+                <Link to='/reservation'><button className="btn">Réserver</button></Link>
                 </article>
-                </section>
-            );
-            })}
-        </>
+            ))}
+            </>
         ) : (
             <p>En attente de chargement</p>
         )}
+        </section>
         <Footer />
-        </>
+    </>
     );
 }
-
+        
 export default MettingRoomPage;

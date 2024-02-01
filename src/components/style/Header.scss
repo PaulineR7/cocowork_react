@@ -41,6 +41,10 @@ li {
     color: $text_color1;
 }
 
+a {
+    text-decoration: none;
+}
+
 .btn {
     @include btn
 }

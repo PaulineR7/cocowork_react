@@ -18,27 +18,27 @@ function ClosedSpacePage() {
 
     return (
         <>
-            <Header />
-            <h2>Espace fermés</h2>
+          <Header />
+          <h2>Espaces fermés</h2>
+          <section className="section-closedspace">
             {closedSpaces ? (
-                <>
-                    {closedSpaces.map((closedSpace) => (
-                        <section className="section-closedspace" key={closedSpace.id}>
-                            <article className="article-closedspace">
-                                <img className='closedspace-img' src={closedSpace.image} alt="Image de l'espace fermé" />
-                                <h3>{closedSpace.name}</h3>
-                                <button className="btn">Réserver</button>
-                            </article>
-                        </section>
-                    ))}
-                </>
+              <>
+                {closedSpaces.map((closedSpace) => (
+                  <article className="article-closedspace" key={closedSpace.id}>
+                    <img className='closedspace-img' src={closedSpace.image} alt="Image de l'espace fermé" />
+                    <h3>{closedSpace.name}</h3>
+                    <button className="btn">Réserver</button>
+                  </article>
+                ))}
+              </>
             ) : (
-                <p>En attente de chargement</p>
+              <p>En attente de chargement</p>
             )}
-            <Footer />
+          </section>
+          <Footer />
         </>
-    );
-}
+      );
+    }
     
     export default ClosedSpacePage;
     
