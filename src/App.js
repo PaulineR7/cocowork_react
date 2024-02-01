@@ -9,6 +9,8 @@ import MettingRoomPage from './pages/guest/MettingRoomPage';
 import DashboardAdmin from './pages/admin/DashboardAdmin';
 import AdminUsersPage from './pages/admin/AdminUsersPage';
 import AdminMeetingRoom from './pages/admin/AdminMettingRoom';
+import ReservationPage from './pages/guest/ReservationPage';
+import SpaceMember from './pages/guest/SpaceMember';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path='/coworks' element={<CoworksPage />} />
         <Route path='/closedspace' element={<ClosedSpacePage />} />
         <Route path='/mettingroom' element={<MettingRoomPage />} />
+        <Route path='/reservation' element={<ReservationPage />} />
+        <Route path='/spacemember' element={<SpaceMember />} />
 
                   {/* ROUTES ADMIN */}
         <Route path='/admin' element={<DashboardAdmin />} />
