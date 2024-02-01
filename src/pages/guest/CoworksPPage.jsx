@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import '../guest/style/CoworksPage.scss';
 
 function CoworksPage() {
+    
     return(
         <>
         <Header />
