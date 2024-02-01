@@ -11,6 +11,7 @@ import AdminUsersPage from './pages/admin/AdminUsersPage';
 import AdminMeetingRoom from './pages/admin/AdminMettingRoom';
 import ReservationPage from './pages/guest/ReservationPage';
 import SpaceMember from './pages/guest/SpaceMember';
+import AdminUsersDetailsPage from './pages/admin/AdminUsersDetailsPage';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='/admin' element={<DashboardAdmin />} />
         <Route path='/admin/users' element={<AdminUsersPage />} />
         <Route path='/admin/meetingroom' element={<AdminMeetingRoom />} />
+        <Route path='/usersdetails/:id' element={<AdminUsersDetailsPage />} />
 
       </Routes>
     </BrowserRouter>
