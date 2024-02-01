@@ -36,7 +36,9 @@ function AdminUsersPage() {
         <div>
           <h3 className="title-article-users">A valider</h3>
           {users ? (
-            users.map((user) => (
+            users
+            .filter((user) => user.status === false)
+            .map((user) => (
               <article className="flex-users" key={user.id}>
                 <p>{user.lastname}</p>
                 <p>{user.name}</p>
@@ -49,23 +51,30 @@ function AdminUsersPage() {
           )}
         </div>
         <div>
-          <h3 className="title-article-users">Abonnés</h3>
-          {users ? (
-            users.map((user) => (
-              <article className="flex-users" key={user.id}>
-                <p>{user.lastname}</p>
-                <p>{user.name}</p>
-                <p>Statut</p>
-                <p>Date inscription</p>
-                <p>Date de validation</p>
-                <img className="img-loupe" src="../assets/img/loupe.png" alt=""/>
-                <img className="img-valide-users" src="../assets/img/delete.png" alt="croix rouge"/>
-              </article>
-            ))
-          ) : (
-            <p>En cours de chargement</p>
-          )}
-        </div>
+        <h3 className="title-article-users">Abonnés</h3>
+        {users ? (
+          users
+            .filter((user) => user.status)
+            .map((user) => {
+              const createdAtDate = new Date(user.createdAt);
+              const formattedDate = `${createdAtDate.getDate()}/${createdAtDate.getMonth() + 1}/${createdAtDate.getFullYear()}`;
+
+              return (
+                <article className="flex-users" key={user.id}>
+                  <p>{user.lastname}</p>
+                  <p>{user.name}</p>
+                  <p>Statut : Validé</p>
+                  <p>Date inscription : {formattedDate}</p>
+                  <p>Date de validation</p>
+                  <img className="img-loupe" src="../assets/img/loupe.png" alt="" />
+                  <img className="img-valide-users" src="../assets/img/delete.png" alt="croix rouge" />
+                </article>
+              );
+            })
+        ) : (
+          <p>En cours de chargement</p>
+        )}
+      </div>
       </section>
       <Footer />
     </>
