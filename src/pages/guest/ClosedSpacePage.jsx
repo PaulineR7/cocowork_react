@@ -25,7 +25,7 @@ function ClosedSpacePage() {
                     {closedSpaces.map((closedSpace) => (
                         <section className="section-closedspace" key={closedSpace.id}>
                             <article className="article-closedspace">
-                                <img className='closedspace-img' src={closedSpace.image} alt="Image du cowork" />
+                                <img className='closedspace-img' src={closedSpace.image} alt="Image de l'espace fermé" />
                                 <h3>{closedSpace.name}</h3>
                                 <button className="btn">Réserver</button>
                             </article>
