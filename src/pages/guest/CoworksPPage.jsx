@@ -19,23 +19,25 @@ function CoworksPage() {
         <>
         <Header />
         <h2>30 bureaux nomades</h2>
-        {coworks ? (
-        <>
+        
+                <section className="section-coworks" >
+                {coworks ? (
+                <>
             {coworks.map((cowork) => {
             return (
-                <section className="section-coworks" key={cowork.id}>
-                <article className="article-coworks">
+                <article className="article-coworks" key={cowork.id}>
                     <img className="coworks-img" src={cowork.image} alt="Image du cowork" />
                     <h3>{cowork.name}</h3>
                     <button className="btn">Réserver</button>
                 </article>
-                </section>
-            );
+                );
             })}
         </>
         ) : (
             <p>En attente de chargement</p>
         )}
+                </section>
+        
         <Footer />
         </>
     );
