@@ -17,27 +17,26 @@ function CoworksPage() {
 
     return (
         <>
-        <Header />
-        <h2>30 bureaux nomades</h2>
-        {coworks ? (
-        <>
-            {coworks.map((cowork) => {
-            return (
-                <section className="section-coworks" key={cowork.id}>
-                <article className="article-coworks">
+          <Header />
+          <h2>30 bureaux nomades</h2>
+          <section className="section-coworks">
+            {coworks ? (
+              <>
+                {coworks.map((cowork) => (
+                  <article className="article-coworks" key={cowork.id}>
                     <img className="coworks-img" src={cowork.image} alt="Image du cowork" />
                     <h3>{cowork.name}</h3>
                     <button className="btn">Réserver</button>
-                </article>
-                </section>
-            );
-            })}
+                  </article>
+                ))}
+              </>
+            ) : (
+              <p>En attente de chargement</p>
+            )}
+          </section>
+          <Footer />
         </>
-        ) : (
-            <p>En attente de chargement</p>
-        )}
-        <Footer />
-        </>
-    );
-}
-export default CoworksPage;
+      );
+    }
+    
+    export default CoworksPage;
