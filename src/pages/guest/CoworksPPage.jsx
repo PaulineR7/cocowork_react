@@ -25,7 +25,7 @@ function CoworksPage() {
             return (
                 <section className="section-coworks" key={cowork.id}>
                 <article className="article-coworks">
-                    <img className="coworks-img" src={cowork.img} alt="Image du cowork" />
+                    <img className="coworks-img" src={cowork.image} alt="Image du cowork" />
                     <h3>{cowork.name}</h3>
                     <button className="btn">Réserver</button>
                 </article>
@@ -34,7 +34,7 @@ function CoworksPage() {
             })}
         </>
         ) : (
-        <p>En attente de chargement</p>
+            <p>En attente de chargement</p>
         )}
         <Footer />
         </>
