@@ -11,7 +11,10 @@ function AdminUsersPage() {
     (async () => {
         const usersResponse = await fetch("http://localhost:3005/api/users");
         const usersResponseData = await usersResponse.json();
-        setUsers(usersResponseData);
+
+        const sortedUsers = usersResponseData.sort((a, b) => a.lastname.localeCompare(b.lastname));
+
+        setUsers(sortedUsers);
       })();
     }, []); 
   console.log(users);
