@@ -1,46 +1,51 @@
-
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+// import Footer from "../../components/Footer";
+// import Header from "../../components/Header";
 import './../admin/style/AdminUsersPage.scss';
 import { useEffect, useState} from "react";
-import Users from "../../components/Users";
-import Pagination from "../../components/Pagination";
+// import Users from "../../components/Users";
 
 function AdminUsersPage() {
-    const [users, setUsers] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage, setPostsPerPage] = useState(20)
+    const [users, setUsers] = useState(null);
+
+    const [validUsers, setValidUsers] = useState(null)
 
   useEffect(() => {
-    (async () => {
-        const usersResponse = await fetch("http://localhost:3005/api/users");
-        const usersResponseData = await usersResponse.json();
+      (async () => {
+        console.log("Fetching users");
+          const usersResponse = await fetch("http://localhost:3005/api/users");
+          const usersResponseData = await usersResponse.json();
 
-        const sortedUsers = usersResponseData.sort((a, b) => a.lastname.localeCompare(b.lastname));
+          const sortedUsers = usersResponseData.sort((a, b) => a.lastname.localeCompare(b.lastname));
 
-        setUsers(sortedUsers);
-      })();
+          setUsers(sortedUsers);
+        })();
       
     }, []); 
-  console.log(users)
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentUsers = users.slice(indexOfFirstPost, indexOfLastPost);
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    useEffect(() => {
+        (async () => {
+          console.log("Fetching valid users");
+            const usersResponse = await fetch("http://localhost:3005/api/users/valid");
+            const usersResponseData = await usersResponse.json();
+    
+            const sortedUsers = usersResponseData.sort((a, b) => a.lastname.localeCompare(b.lastname));
+    
+            setValidUsers(sortedUsers);
+          })();
+        
+    }, []); 
+
+
+  // console.log(users)
+  console.log(validUsers)
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <section>
         <h2 className="title-users">Gestions des abonnés</h2>
-        <Users users={currentUsers} />
-        <Pagination
-        postsPerPage={postsPerPage}
-        totalUsers = {users.length}
-        paginate={paginate}
-        />
+        {/* <Users users={users} validUsers={validUsers} /> */}
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

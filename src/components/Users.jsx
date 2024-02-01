@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 
-function Users({users}) {
+function Users({users, validUsers}) {
     return(
         <>
         <div>
           <h3 className="title-article-users">A valider</h3>
           {users ? (
             users
-            .filter((user) => user.status === false)
             .map((user) => (
             
               <article className="flex-users" key={user.id}>
@@ -23,9 +22,8 @@ function Users({users}) {
         </div>
         <div>
         <h3 className="title-article-users">Abonnés</h3>
-        {users ? (
+        {validUsers ? (
           users
-            .filter((user) => user.status)
             .map((user) => {
               const createdAtDate = new Date(user.createdAt);
               const formattedDate = `${createdAtDate.getDate()}/${createdAtDate.getMonth() + 1}/${createdAtDate.getFullYear()}`;
