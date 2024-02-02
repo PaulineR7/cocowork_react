@@ -12,7 +12,11 @@ import AdminMeetingRoom from './pages/admin/AdminMettingRoom';
 import ReservationPage from './pages/guest/ReservationPage';
 import SpaceMember from './pages/guest/SpaceMember';
 import AdminUsersDetailsPage from './pages/admin/AdminUsersDetailsPage';
+<<<<<<< HEAD
 import RegisterPage from './pages/guest/CreateAccount';
+=======
+import MentionsLegalsPage from './pages/guest/MentionsLegalsPage';
+>>>>>>> 728abbb9d0d3fdae73091ffc573a436e304f31f2
 
 function App() {
   return (

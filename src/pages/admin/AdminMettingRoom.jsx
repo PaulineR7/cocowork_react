@@ -35,7 +35,7 @@ function AdminMeetingRoom() {
                     <label>
                         <input type="text" name="name" placeholder="Prix Hors Taxe à la demie journée"/>
                     </label>
-                    <button>Créer</button>
+                    <button className="btn">Créer</button>
                 </form>
             </div>
         </section>
