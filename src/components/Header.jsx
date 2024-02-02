@@ -1,10 +1,14 @@
 import { useState } from 'react';
-import './style/Header.scss'
+import './style/Header.scss';
+import { jwtDecode } from 'jwt-decode';
 import { Link } from 'react-router-dom'
 
 function Header() {
+    const token = localStorage.getItem("jwt")
 
     const [submenuVisible, setSubmenuVisible] = useState(false)
+
+    
 
     const handleClick = () => {
         setSubmenuVisible(!submenuVisible)
@@ -14,7 +18,7 @@ function Header() {
             <div className='logo'>Cocowork</div>
             <ul className='ul-header'>
                 <Link to='/'><li>Accueil</li></Link>
-                <Link to="/spacemember"><li>Espace membre</li></Link>
+                {token && <Link to={`/spacemember/${jwtDecode(token).id}`}><li>Espace membre</li></Link>}
                 <Link to='/contact' ><li>Contact</li></Link>
                 <Link to='/admin'><li>Dashboard</li></Link>
                 <li onClick={handleClick} className='menu-with-submenu'>Espace coworking &#8595;

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import '../guest/style/ReservationPage.scss';
 
 function ReservationPage() {
 
@@ -48,12 +49,12 @@ function ReservationPage() {
         <>
         <Header />
 
-        <section>
-            <h2>Réservation</h2>
+        <section className="section-resa">
+            <h2 className="title-resa">Réservation</h2>
             {message && <p>{message}</p>}
-            <form onSubmit={handleReservation}>
+            <form className="form-resa" onSubmit={handleReservation}>
                 
-                <label>
+                <label className="label-resa resa1"> Choix de la salle
                     <select name="roomId">
                         <option value="1">Salle 1</option>
                         <option value="2">Salle 2</option>
@@ -61,18 +62,18 @@ function ReservationPage() {
                     </select>
                 </label>
 
-                <label>
+                <label className="label-resa"> Durée
                     <select name="duration">
                         <option value="half-day">Half-Day</option>
                         <option value="full-day">Full-Day</option>
                     </select>
                 </label>
 
-                <label>
+                <label className="label-resa"> Date
                     <input type="date" name='date'/>
                 </label>
 
-                <input type="submit" name="" id="" />
+                <input className="btn" type="submit" name="" id="" />
             </form>
         </section>
 

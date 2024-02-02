@@ -64,9 +64,9 @@ function LoginPage() {
         <>
         <Header />
             <section className="section">
-                <h2>Connexion</h2>
+                <h2 className="title-login">Connexion</h2>
                 {message && <p className="loginVerify">{message}</p>}
-                <form onSubmit={handleLogin}>
+                <form className="login-box" onSubmit={handleLogin}>
 
                     <label>Email
                         <input type="email" name="email" />
@@ -76,11 +76,12 @@ function LoginPage() {
                         <input type="password" name="password"/>
                         {/* <button>Voir</button> */}
                         <Link><p>Mot de passe oublié ?</p></Link>
+                        <Link to='/inscription'><p>Vous n'êtes pas membre ? Inscrivez vous ! </p></Link>
                     </label>
 
                     <input className="btn" type="submit" name="login" value="Connexion" />
                 </form>
-                <Link to='/inscription'><p>Vous n'êtes pas membre ? Inscrivez vous ! </p></Link>
+                
             </section>
         <Footer />
         </>

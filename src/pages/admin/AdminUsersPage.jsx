@@ -1,8 +1,8 @@
-// import Footer from "../../components/Footer";
-// import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import './../admin/style/AdminUsersPage.scss';
 import { useEffect, useState} from "react";
-// import Users from "../../components/Users";
+import Users from "../../components/Users";
 
 function AdminUsersPage() {
     const [users, setUsers] = useState(null);
@@ -40,12 +40,12 @@ function AdminUsersPage() {
   console.log(validUsers)
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <section>
         <h2 className="title-users">Gestions des abonnés</h2>
-        {/* <Users users={users} validUsers={validUsers} /> */}
+        <Users users={users} validUsers={validUsers} />
       </section>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

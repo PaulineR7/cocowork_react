@@ -26,7 +26,7 @@ function App() {
         <Route path='/closedspace' element={<ClosedSpacePage />} />
         <Route path='/meetingrooms' element={<MettingRoomPage />} />
         <Route path='/reservation' element={<ReservationPage />} />
-        <Route path='/spacemember' element={<SpaceMember />} />
+        <Route path='/spacemember/:id' element={<SpaceMember />} />
 
                   {/* ROUTES ADMIN */}
         <Route path='/admin' element={<DashboardAdmin />} />

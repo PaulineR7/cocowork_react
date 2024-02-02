@@ -1,17 +1,27 @@
 .section {
-    border: 2px solid #930101;
+    margin-bottom: 40px;
+}
+.title-login {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
 }
 
-form {
+.login-box {
     display: flex;
     flex-direction:column;
     align-items: center;
     text-align: center;
+    border: 2px solid #930101;
+    width: 50%;
+    margin: 0 auto;
+    padding: 1%;
 }
 
 label {
     display: flex;
     flex-direction: column;
+    margin-bottom: 19.5px;
 }
 
 input {

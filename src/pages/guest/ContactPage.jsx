@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import '../guest/style/ContactPage.scss';
 
 function ContactPage() {
 
@@ -52,33 +53,33 @@ function ContactPage() {
         <>
         <Header />
 
-        <section>
-            <h2>Nous contacter</h2>
+        <section className="section-contact">
+            <h2 className="title-contact">Nous contacter</h2>
             {message && <p>{message}</p>}
-            <form onSubmit={handleContact}>
+            <form className="flex-contact" onSubmit={handleContact}>
 
-                <label>Nom et Prénom
-                    <input type="text" name="name" />
+                <label className="label-contact first">Nom et Prénom
+                    <input className="input-contact" type="text" name="name" />
                 </label>
 
-                <label>Email
-                    <input type="email" name="email" />
+                <label className="label-contact">Email
+                    <input className="input-contact" type="email" name="email" />
                 </label>
 
-                <label>Numéro de téléphone
-                    <input type="text" name="phoneNumber"/>
+                <label className="label-contact">Numéro de téléphone
+                    <input className="input-contact" type="text" name="phoneNumber"/>
                 </label>
 
-                <label>Objet de la demande
-                    <select name="title">
+                <label className="label-contact">Objet de la demande
+                    <select className="input-contact" name="title">
                         <option value="reservation">Réservation</option>
                         <option value="contact_professionnel">Contact professionnel</option>
                         <option value="autre">Autre</option>
                     </select>
                 </label>
 
-                <label>Message
-                    <textarea name="content" id="" cols="30" rows="10"></textarea>
+                <label className="label-contact">Message
+                    <textarea className="input-contact" name="content" id="" cols="30" rows="10"></textarea>
                 </label>
                 
                 <input className="btn" type="submit" name="login" value="Envoyer" />

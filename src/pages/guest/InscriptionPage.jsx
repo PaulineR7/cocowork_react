@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import '../guest/style/InscriptionPage.scss';
 
 function InscriptionPage() {
   const [message, setMessage] = useState(null);
@@ -69,48 +70,48 @@ function InscriptionPage() {
     <>
       <Header />
       <>{message && <p>{message}</p>}</>
-      <section>
-        <h2>Inscription</h2>
+      <section className="section-inscription">
+        <h2 className="inscription-title">Inscription</h2>
 
         <form className="form-flex" onSubmit={handleUserCreate}>
-          <label>
+          <label className="first-label">
             Prénom
-            <input type="text" name="name" />
+            <input className="input-inscription" type="text" name="name" />
           </label>
           <label>
             Nom
-            <input type="text" name="lastname" />
+            <input className="input-inscription" type="text" name="lastname" />
           </label>
           <label>
             Adresse
-            <input type="text" name="address" />
+            <input className="input-inscription" type="text" name="address" />
           </label>
           <label>
             Code postal
-            <input type="text" name="postcode" />
+            <input className="input-inscription" type="text" name="postcode" />
           </label>
           <label>
             Ville
-            <input type="text" name="town" />
+            <input className="input-inscription" type="text" name="town" />
           </label>
           <label>
             Email
-            <input type="email" name="email" />
+            <input className="input-inscription" type="email" name="email" />
           </label>
           <label>
             Mot de passe
-            <input type="password" name="password" />
+            <input className="input-inscription" type="password" name="password" />
           </label>
           <label>
             Confirmation du mot de passe
-            <input type="password" name="confirmPassword" />
+            <input className="input-inscription" type="password" name="confirmPassword" />
           </label>
           <label>
             Numéro de téléphone
-            <input type="text" name="phoneNumber" />
+            <input className="input-inscription" type="text" name="phoneNumber" />
           </label>
 
-          <button type="submit">S'inscrire</button>
+          <button className="btn" type="submit">S'inscrire</button>
         </form>
       </section>
       <Footer />
