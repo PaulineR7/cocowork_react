@@ -12,6 +12,7 @@ import AdminMeetingRoom from './pages/admin/AdminMettingRoom';
 import ReservationPage from './pages/guest/ReservationPage';
 import SpaceMember from './pages/guest/SpaceMember';
 import AdminUsersDetailsPage from './pages/admin/AdminUsersDetailsPage';
+import RegisterPage from './pages/guest/CreateAccount';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/meetingrooms' element={<MettingRoomPage />} />
         <Route path='/reservation' element={<ReservationPage />} />
         <Route path='/spacemember/:id' element={<SpaceMember />} />
+        <Route path='/register' element={<RegisterPage />} />
 
                   {/* ROUTES ADMIN */}
         <Route path='/admin' element={<DashboardAdmin />} />
