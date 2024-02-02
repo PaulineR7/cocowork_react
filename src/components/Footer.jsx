@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './style/Footer.scss'
 
 function Footer () {
@@ -8,7 +9,7 @@ function Footer () {
                 <p>Quai Richelieu, 33000 Bordeaux</p>
                 <p>09 89 69 65 12</p>
                 <p>bonjour@cocowork.com</p>
-                <p>Mentions Légales</p>
+                <Link to='/mentionslegal'><p>Mentions Légales</p></Link>
             </div>
 
             <div>
