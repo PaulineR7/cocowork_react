@@ -30,6 +30,7 @@ function App() {
         <Route path='/reservation' element={<ReservationPage />} />
         <Route path='/spacemember/:id' element={<SpaceMember />} />
         <Route path='/register' element={<RegisterPage />} />
+        <Route path='/mentions' element={<MentionsLegalsPage />} />
 
                   {/* ROUTES ADMIN */}
         <Route path='/admin' element={<DashboardAdmin />} />
