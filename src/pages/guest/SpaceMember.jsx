@@ -31,7 +31,7 @@ function SpaceMember() {
         <>
         <Header />
             <section>
-                <h2 className="titlespacemember">Bienvenue {jwtDecode(token).email}</h2>
+                <h2 className="titlespacemember">Bienvenue {jwtDecode(token).name}</h2>
                 <div>
                     <h3>Réservation en cours</h3>
                     <article className="resa-member">
